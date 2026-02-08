@@ -1,13 +1,6 @@
 import { NextResponse } from 'next/server';
 import { YoutubeTranscript } from 'youtube-transcript';
 import OpenAI from 'openai';
-import { setGlobalDispatcher, ProxyAgent } from 'undici';
-
-// 如果配置了 HTTP 代理，则设置全局代理（解决国内无法访问 YouTube 的问题）
-if (process.env.HTTPS_PROXY) {
-  const dispatcher = new ProxyAgent(process.env.HTTPS_PROXY);
-  setGlobalDispatcher(dispatcher);
-}
 
 // 演示用的 Mock 字幕（当抓取失败时兜底使用，确保流程跑通）
 const MOCK_TRANSCRIPT = `
