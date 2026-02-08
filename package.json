@@ -23,7 +23,8 @@
     "youtube-transcript": "^1.2.1"
   },
   "overrides": {
-    "node-domexception": "1.0.0"
+    "node-domexception": "1.0.0",
+    "next": "$next"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.16",
