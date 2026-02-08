@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { YoutubeTranscript } from 'youtube-transcript';
 import OpenAI from 'openai';
 
+export const runtime = 'edge';
+
 // 演示用的 Mock 字幕（当抓取失败时兜底使用，确保流程跑通）
 const MOCK_TRANSCRIPT = `
 Welcome to this educational video about the Solar System. 
